@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+  <head>
+    <title>Login | OBE2.0</title>
+    <meta id="viewport" name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'mainapp/style-login.css' %}" />
+    <link rel="icon" type="image/png" href="{% static 'mainapp/images/iub_logo.jpg' %}" /> -->
+  </head>
+
+  <body>
+    <div class="body rounded">
+      <form
+        style="text-align: center; width: 330px"
+        action="login"
+        method="post"
+      >
+        {% csrf_token %}
+        <img src="{% static '/OBEApp/images/iub_logo.png' %}" width="150px" />
+        <h1>Welcome to OBE2.0</h1>
+        <div style="text-align: left">
+          <div class="form-group">
+            <label>Username</label>
+            <input
+              type="text"
+              name="username"
+              class="form-control"
+              autofocus
+              placeholder="Username"
+            />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              placeholder="Password"
+            />
+
+            <select name="usertype" id="usertype">
+              <option value="Faculty">Faculty</option>
+              <option value="student">Student</option>
+            </select>
+            <script>
+              function forgotpassword() {
+                alert("Please contact the Registrar's Office.");
+              }
+            </script>
+          </div>
+        </div>
+        <button class="btn btn-primary"><a href="/question">Log in</a></button>
+      </form>
+    </div>
+  </body>
+</html>

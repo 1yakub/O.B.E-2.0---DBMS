@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    select {
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: black;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+
+    }
+
+    button {
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 40%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>OBE 2.0</h1>
+  <button><a href="/course">course</a></button>
+  <p>Question Bank</p>
+  <table>
+    <tr>
+      <th>Question No </th>
+      <th>Question Type</th>
+      <th>Question Details</th>
+      <th>Sample Answer</th>
+    </tr>
+
+    {% for i in row1 %}
+    <tr>
+      {% for j in i %}
+      <td>{{ j }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+
+  </table>
+  <form action="question" method="post">
+    {% csrf_token %}
+    <label for="semester">Choose a Semester:</label>
+    <select name="semester" id="semester">
+      <option value="autumn">Autumn</option>
+      <option value="spring">Spring</option>
+      <option value="summer">Summer</option>
+    </select>
+    <label for="exam">Choose an Exam:</label>
+    <select name="exam" id="exam">
+      <option value="quiz">Quiz</option>
+      <option value="mid">Mid</option>
+      <option value="final">Final</option>
+    </select>
+    <br /><br />
+    <label for="question_no">Question No:</label>
+    <input type="text" id="question_no" name="question_no" />
+    <br /><br />
+    <label for="question_type">Question Type:</label>
+    <input type="text" id="question_type" name="question_type" />
+    <br /><br />
+    <label for="question_details">Question Details:</label>
+    <input type="text" id="question_details" name="question_details" />
+    <br /><br />
+    <label for="sample_answer">Sample Answer:</label>
+    <input type="text" id="sample_answer" name="sample_answer" />
+    <select name="co" id="co">
+      <option value="co1">CO1</option>
+      <option value="co2">CO2</option>
+      <option value="co3">CO3</option>
+    </select>
+    <br /><br />
+    <input type="submit" value="Submit" />
+  </form>
+
+  <p></p>
+</body>
+
+</html>

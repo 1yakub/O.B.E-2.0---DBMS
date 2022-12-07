@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+</style>
+
+<body>
+  <h1>OBE 2.0</h1>
+
+  <h2>Course Outline</h2>
+  <form action="course" , method="post">
+    {% csrf_token %}
+    <label for="courseCode">Course Code:</label>
+    <input type="text" id="courseCode" name="courseCode" />
+    <br /><br />
+    <label for="courseTitle">Course Title:</label>
+    <input type="text" id="courseTitle" name="courseTitle" />
+    <br /><br />
+    <label for="courseType">Course Type:</label>
+    <input type="text" id="courseType" name="courseType" />
+    <br /><br />
+    <label for="creditValue">Credit Value:</label>
+    <input type="text" id="creditValue" name="creditValue" />
+    <br /><br />
+    <label for="chpw">Contact hours per week:</label>
+    <input type="text" id="chpw" name="chpw" />
+    <br /><br />
+    <label for="courseDescription">Course Description:</label>
+    <input type="text" id="courseDescription" name="courseDescription" />
+    <br /><br />
+    <label for="courseObjective">Course Objective:</label>
+    <input type="text" id="courseObjective" name="courseObjective" />
+    <br /><br />
+    <label for="coursePolicy">Course Policy:</label>
+    <input type="text" id="coursePolicy" name="coursePolicy" />
+    <br /><br />
+    <label for="ads">Academic dishonesty:</label>
+    <input type="text" id="ads" name="ads" />
+    <br /><br />
+
+    <label for="swdas">Student with disabilities and stress:</label>
+    <input type="text" id="swdas" name="swdas" />
+    <br /><br />
+    <label for="ndp">Non-discrimination policy:</label>
+    <input type="text" id="ndp" name="ndp" />
+    <br /><br />
+    <label for="courseContent">Course Content:</label>
+    <input type="text" id="courseContent" name="courseContent" />
+    <br /><br />
+    <label for="clom">Course learning outcome (CLO) matrix:</label>
+    <input type="text" id="clom" name="clom" />
+    <br /><br />
+    <label for="lpmclo">Lesson planning with mapping of CLO:</label>
+    <input type="text" id="lpmclo" name="lpmclo" />
+    <br /><br />
+    <label for="tas">teaching and assessment strategies:</label>
+    <input type="text" id="tas" name="tas" />
+    <br /><br />
+    <label for="assessment">Assessment and evaluation:</label>
+    <input type="text" id="assessment" name="assessment" />
+    <br /><br />
+    <label for="grading">Grading chart:</label>
+    <input type="text" id="grading" name="grading" />
+    <br /><br />
+    <label for="referenceBook">Reference book:</label>
+    <input type="text" id="referenceBook" name="referenceBook" />
+    <br /><br />
+    <label for="additionalMaterials">Additional materials section:</label>
+    <input type="text" id="additionalMaterials" name="additionalMaterials" />
+    <br /><br />
+
+    <input type="submit" value="Submit" />
+  </form>
+  <h2>Course Outline</h2>
+  <p></p>
+
+
+  <p>Course Code:</p>
+  <p>Course Title:</p>
+  <p>Course Type:</p>
+  <p>Credit Value:</p>
+  <p>Contact hours per week:</p>
+  <p>Course Description:</p>
+  <p>Course Objective:</p>
+  <p>Course Policy:</p>
+  <p>Academic dishonesty:</p>
+  <p>Student with disabilities and stress:</p>
+  <p>Non-discrimination policy:</p>
+  <p>Course Content:</p>
+  <p>Course learning outcome (CLO) matrix:</p>
+  <p>CLesson planning with mapping of CLO:</p>
+  <p>teaching and assessment strategies:</p>
+  <p>Assessment and evaluation:</p>
+  <p>Grading chart:</p>
+  <p>Reference book:</p>
+  <p>Additional materials section.:</p>
+
+
+</body>
+
+</html>
